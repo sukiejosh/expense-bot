@@ -1,0 +1,54 @@
+{
+  "name": "fg-expense-bot-nigeria",
+  "version": "0.0.1",
+  "description": "An FG-Nigeria expense bot!",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "format": "pretty-quick",
+    "precommit": "pretty-quick --staged"
+  },
+  "pre-commit": [
+    "format"
+  ],
+  "devDependencies": {
+    "prettier": "1.15.1",
+    "pretty-quick": "1.8.0"
+  },
+  "dependencies": {
+    "console.lol": "0.1.2",
+    "dotenv": "6.1.0",
+    "twit": "2.2.11",
+    "unique-random-array": "1.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hngi/expense-bot.git"
+  },
+  "keywords": [
+    "twitter",
+    "bot",
+    "hng",
+    "hngi7",
+    "expense",
+    "fg",
+    "nigeria"
+  ],
+  "author": "Team-Granite HNGi7 (https://hngi7.hng.tech/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hngi/expense-bot/issues"
+  },
+  "homepage": "https://github.com/hngi/expense-bot#readme",
+  "contributors": [
+    {
+      "name": "Piouson",
+      "email": null,
+      "url": "https://github.com/piouson",
+      "contributions": 1,
+      "additions": 0,
+      "deletions": 0,
+      "hireable": true
+    }
+  ]
+}
