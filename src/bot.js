@@ -8,6 +8,11 @@ const Twit = require('twit')
 const config = require('./config')
 const consoleLol = require('console.lol')
 
+if (!Object.values(config.twitterKeys).every(Boolean)) {
+  console.lol('ERRORDERP: Creds missing in .env file! Mocking Twitter data...');
+  return;
+}
+
 const bot = new Twit(config.twitterKeys)
 
 const retweet = require('./api/retweet')
