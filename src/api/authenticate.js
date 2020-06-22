@@ -1,11 +1,15 @@
 // bot = new Twit(config.twitterKeys); in bot.js
 
 function authenticate(bot) {
-  bot.get('account/verify_credentials', {
-    include_entities: false,
-    include_email: false,
-    skip_status: true
-  }, authenticated);
+  bot.get(
+    'account/verify_credentials',
+    {
+      include_entities: false,
+      include_email: false,
+      skip_status: true
+    },
+    authenticated
+  );
 }
 
 function authenticated(err, res) {

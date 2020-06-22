@@ -10,13 +10,17 @@ function search(query, callback) {
     return;
   }
 
-  bot.get('search/tweets', {
-    q: query,
-    result_type: param.resultType,
-    lang: param.language,
-    filter: 'safe',
-    count: param.searchCount
-  }, callback);
+  bot.get(
+    'search/tweets',
+    {
+      q: query,
+      result_type: param.resultType,
+      lang: param.language,
+      filter: 'safe',
+      count: param.searchCount
+    },
+    callback
+  );
 }
 
 module.exports = search;

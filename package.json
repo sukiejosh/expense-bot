@@ -10,13 +10,20 @@
   "scripts": {
     "start": "node server.js",
     "format": "pretty-quick",
-    "precommit": "pretty-quick --staged"
+    "precommit": "pretty-quick --staged",
+    "dev": "nodemon ./server.js",
+    "lint": "eslint \"src/**/*.js\"",
+    "lint:fix": "eslint --fix \"src/**/*.js\""
   },
   "pre-commit": [
     "format"
   ],
   "devDependencies": {
-    "prettier": "^1.15.1",
+    "eslint": "^7.3.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "nodemon": "^2.0.4",
+    "prettier": "1.19.1",
     "pretty-quick": "^1.8.0"
   },
   "dependencies": {

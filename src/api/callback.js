@@ -5,16 +5,15 @@ function callback(req, res) {
     auth.oauthToken,
     auth.oauthTokenSecret,
     req.query.oauth_verifier,
-    function (err, oauthAccessToken, oauthAccessTokenSecret, results) {
+    function(err, oauthAccessToken, oauthAccessTokenSecret, results) {
       if (err) {
         res.json({ error: err });
-      }
-      else if (results.screen_name !== process.env.TWITTER_USERNAME) {
+      } else if (results.screen_name !== process.env.TWITTER_USERNAME) {
         res.json({
-          error: "Human, only bot @expenseng should login! You've just been Hacked!"
+          error:
+            "Human, only bot @expenseng should login! You've just been Hacked!"
         });
-      }
-      else {
+      } else {
         res.json({
           url: '/oauth/callback',
           accessToken: oauthAccessToken,
