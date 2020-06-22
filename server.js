@@ -7,10 +7,10 @@ const app = express();
 
 app.use(express.static('src/public'));
 
-app.get("/", home);
-app.get("/oauth/authorize", authorize);
-app.get("/oauth/callback", callback);
-app.get("/api/tweets/:query?", getTweets);
+app.get('/', home);
+app.get('/oauth/authorize', authorize);
+app.get('/oauth/callback', callback);
+app.get('/api/tweets/:query?', getTweets);
 
 function home(req, res) {
   res.sendFile(__dirname + '/src/views/index.html');
@@ -22,13 +22,12 @@ function getTweets(req, res) {
   search(query, function(err, data) {
     if (err) {
       res.json([]);
-    }
-    else {
+    } else {
       res.json(data.statuses);
     }
   });
 }
 
-const listener = app.listen(process.env.PORT, function () {
+const listener = app.listen(process.env.PORT, function() {
   console.lol('Your app is listening on port ' + listener.address().port);
 });
