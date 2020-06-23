@@ -43,3 +43,9 @@ Twitter content may be displayed off of Twitter in the following way:
 
 - find comments to its tweets
 - comments with specific keywords like `"ExpenseNGShare"` may be featured on [ExpenseNG.com](https://www.expenseng.com/)
+
+## License
+
+MIT License
+
+Copyright (c) 2020, Team Granite HNGi7. All rights reserved.
