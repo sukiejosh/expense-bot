@@ -14,7 +14,7 @@ app.get('/oauth/authorize', authorize);
 app.get('/oauth/callback', callback);
 app.get('/api/tweets/:query?', getTweets);
 app.get('/api/timeline/mentions', getMentions);
-app.post('/api/timeline/mentions/like', likeUsers);
+app.get('/api/timeline/mentions/like', likeUsers);
 
 function home(req, res) {
   res.sendFile(__dirname + '/src/views/index.html');
